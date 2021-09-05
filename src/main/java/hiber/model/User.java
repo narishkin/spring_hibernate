@@ -8,7 +8,7 @@ public class User {
 
 
    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
-   @JoinColumn(name = "fk_car_id")
+   @JoinColumn(name = "foreignKey_car_id")
    private Car car;
 
    public Car getCar() {

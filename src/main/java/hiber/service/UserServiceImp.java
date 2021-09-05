@@ -29,7 +29,7 @@ public class UserServiceImp implements UserService {
    @Transactional(readOnly = true)
    @Override
    public List<User> listSelectedUsers() {
-      return userDao.listSelectedUsers();
+      return userDao.listSelectedUsers("from User where car.model='Toyota' and car.series=80");
    }
 
 }

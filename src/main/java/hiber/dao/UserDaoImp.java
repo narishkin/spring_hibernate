@@ -27,9 +27,8 @@ public class UserDaoImp implements UserDao {
     }
 
     @Override
-    public List<User> listSelectedUsers() {
-        TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery(
-                "from User where car.model='Toyota' and car.series=80");
+    public List<User> listSelectedUsers(String HQL) {
+        TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery(HQL);
         return query.getResultList();
     }
 
